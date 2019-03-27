@@ -10,8 +10,11 @@ const common = require('./webpack.common.js');
 console.log(chalk.green('Building client for development...'));
 
 module.exports = merge.smart(common, {
+  output: {
+    pathinfo: false,
+  },
   watch: true,
-  devtool: 'inline-source-map',
+  devtool: 'cheap-module-eval-source-map',
   mode: 'development',
   devServer: {
     historyApiFallback: true,

@@ -13,6 +13,8 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
+    symlinks: false,
+    cacheWithContext: false,
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     modules: [
       'node_modules',
